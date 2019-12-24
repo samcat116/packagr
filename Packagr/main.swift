@@ -7,6 +7,13 @@
 //
 
 import Foundation
+import Console
 
-print("Hello, World!")
+
+let arguments = CommandLine.arguments
+
+let docs = Documentation()
+if arguments.contains("--help") || arguments.contains("-h"){
+    docs.printHelpDocs()
+}
 

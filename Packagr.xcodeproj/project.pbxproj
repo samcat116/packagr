@@ -3,11 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2282549623B2B42C00F3B272 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2282549523B2B42C00F3B272 /* main.swift */; };
+		2282549F23B2B96500F3B272 /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = 2282549E23B2B96500F3B272 /* Logging */; };
+		228254A123B2B96500F3B272 /* Console in Frameworks */ = {isa = PBXBuildFile; productRef = 228254A023B2B96500F3B272 /* Console */; };
+		228254A323B2B96500F3B272 /* Command in Frameworks */ = {isa = PBXBuildFile; productRef = 228254A223B2B96500F3B272 /* Command */; };
+		228254A523B2C02200F3B272 /* Documentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228254A423B2C02200F3B272 /* Documentation.swift */; };
+		228254A923B2C14500F3B272 /* Yams in Frameworks */ = {isa = PBXBuildFile; productRef = 228254A823B2C14500F3B272 /* Yams */; };
+		228254AB23B2C15700F3B272 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228254AA23B2C15700F3B272 /* Recipe.swift */; };
+		228254AD23B2C17300F3B272 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228254AC23B2C17300F3B272 /* Run.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +31,11 @@
 
 /* Begin PBXFileReference section */
 		2282549223B2B42C00F3B272 /* Packagr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Packagr; sourceTree = BUILT_PRODUCTS_DIR; };
-		2282549523B2B42C00F3B272 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2282549523B2B42C00F3B272 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = main.swift; path = ../../../../../../../../Projects/Packagr/Packagr/Packagr/main.swift; sourceTree = BUILT_PRODUCTS_DIR; };
+		228254A423B2C02200F3B272 /* Documentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Documentation.swift; sourceTree = "<group>"; };
+		228254A623B2C0D100F3B272 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		228254AA23B2C15700F3B272 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		228254AC23B2C17300F3B272 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228254A323B2B96500F3B272 /* Command in Frameworks */,
+				228254A123B2B96500F3B272 /* Console in Frameworks */,
+				228254A923B2C14500F3B272 /* Yams in Frameworks */,
+				2282549F23B2B96500F3B272 /* Logging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,9 +72,21 @@
 		2282549423B2B42C00F3B272 /* Packagr */ = {
 			isa = PBXGroup;
 			children = (
+				2282549C23B2B89B00F3B272 /* Models */,
 				2282549523B2B42C00F3B272 /* main.swift */,
+				228254A423B2C02200F3B272 /* Documentation.swift */,
+				228254A623B2C0D100F3B272 /* README.md */,
 			);
 			path = Packagr;
+			sourceTree = "<group>";
+		};
+		2282549C23B2B89B00F3B272 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				228254AA23B2C15700F3B272 /* Recipe.swift */,
+				228254AC23B2C17300F3B272 /* Run.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +105,12 @@
 			dependencies = (
 			);
 			name = Packagr;
+			packageProductDependencies = (
+				2282549E23B2B96500F3B272 /* Logging */,
+				228254A023B2B96500F3B272 /* Console */,
+				228254A223B2B96500F3B272 /* Command */,
+				228254A823B2C14500F3B272 /* Yams */,
+			);
 			productName = Packagr;
 			productReference = 2282549223B2B42C00F3B272 /* Packagr */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +139,10 @@
 				Base,
 			);
 			mainGroup = 2282548923B2B42B00F3B272;
+			packageReferences = (
+				2282549D23B2B96500F3B272 /* XCRemoteSwiftPackageReference "console" */,
+				228254A723B2C14500F3B272 /* XCRemoteSwiftPackageReference "Yams" */,
+			);
 			productRefGroup = 2282549323B2B42C00F3B272 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -120,6 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228254AB23B2C15700F3B272 /* Recipe.swift in Sources */,
+				228254AD23B2C17300F3B272 /* Run.swift in Sources */,
+				228254A523B2C02200F3B272 /* Documentation.swift in Sources */,
 				2282549623B2B42C00F3B272 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +324,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2282549D23B2B96500F3B272 /* XCRemoteSwiftPackageReference "console" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vapor/console.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.1;
+			};
+		};
+		228254A723B2C14500F3B272 /* XCRemoteSwiftPackageReference "Yams" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jpsim/Yams.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2282549E23B2B96500F3B272 /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2282549D23B2B96500F3B272 /* XCRemoteSwiftPackageReference "console" */;
+			productName = Logging;
+		};
+		228254A023B2B96500F3B272 /* Console */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2282549D23B2B96500F3B272 /* XCRemoteSwiftPackageReference "console" */;
+			productName = Console;
+		};
+		228254A223B2B96500F3B272 /* Command */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2282549D23B2B96500F3B272 /* XCRemoteSwiftPackageReference "console" */;
+			productName = Command;
+		};
+		228254A823B2C14500F3B272 /* Yams */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 228254A723B2C14500F3B272 /* XCRemoteSwiftPackageReference "Yams" */;
+			productName = Yams;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2282548A23B2B42B00F3B272 /* Project object */;
 }
